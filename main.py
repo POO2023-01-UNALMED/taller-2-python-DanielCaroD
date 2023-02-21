@@ -5,7 +5,7 @@ class Asiento:
         self.registro = registro
         
     def cambiarColor(self, color):
-        validos = ["rojo", "verde", "amarillo", "blanco", "negro"]
+        validos = ["rojo", "verde", "amarillo", "negro", "blanco"]
         for i in validos:
             if color == i:
                 self.color = color
