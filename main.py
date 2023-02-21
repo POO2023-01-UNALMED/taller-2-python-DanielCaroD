@@ -8,7 +8,7 @@ class Asiento:
         validos = ["rojo", "verde", "amarillo", "negro", "blanco"]
         for i in validos:
             if color == i:
-                self.color = color
+                self.color = i
 
 class Motor:
     def __init__(self, numeroCilindros, tipo, registro):
