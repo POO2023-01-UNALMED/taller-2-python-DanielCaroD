@@ -1,11 +1,8 @@
-asientos = 0
 class Asiento:
     def __init__(self, color, precio, registro):
         self.color = color
         self.precio = precio
         self.registro = registro
-        asientos += 1
-        
         
     def cambiarColor(self, color):
         validos = ["rojo", "verde", "amarillo", "negro", "blanco"]
@@ -38,7 +35,7 @@ class Auto:
         self.registro = registro
 
     def cantidadAsientos(self):
-        return (asientos)
+        return len(self.asientos)
     def verificarIntegridad(self):
         if self.registro != self.motor.registro:
             return "Las piezas no son originales"
