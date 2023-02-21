@@ -8,21 +8,7 @@ class Asiento:
         validos = ["rojo", "verde", "amarillo", "negro", "blanco"]
         for i in validos:
             if color == i:
-                self.color = i
-
-class Motor:
-    def __init__(self, numeroCilindros, tipo, registro):
-        self.numeroCilindros = numeroCilindros
-        self.tipo = tipo
-        self.registro = registro
-
-    def cambiarRegistro(self, registro):
-        self.registro = registro 
-    def asignarTipo(self, tipo):
-        tipos = ["electrico", "gasolina"]
-        for i in tipos:
-            if tipo == i:
-                self.tipo = tipo
+                self.color = color
 
 class Auto:
     cantidadCreados = 0
@@ -44,5 +30,16 @@ class Auto:
                 return "Las piezas no son originales"
         return "Auto original"
 
+class Motor:
+    def __init__(self, numeroCilindros, tipo, registro):
+        self.numeroCilindros = numeroCilindros
+        self.tipo = tipo
+        self.registro = registro
 
-            
+    def cambiarRegistro(self, registro):
+        self.registro = registro 
+    def asignarTipo(self, tipo):
+        tipos = ["electrico", "gasolina"]
+        for i in tipos:
+            if tipo == i:
+                self.tipo = tipo
