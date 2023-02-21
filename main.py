@@ -1,36 +1,17 @@
+asientos = 0
 class Asiento:
     def __init__(self, color, precio, registro):
         self.color = color
         self.precio = precio
         self.registro = registro
+        asientos += 1
+        
         
     def cambiarColor(self, color):
         validos = ["rojo", "verde", "amarillo", "negro", "blanco"]
         for i in validos:
             if color == i:
                 self.color = color
-
-class Auto:
-    def __init__(self, modelo, precio, asientos, marca, motor, registro):
-        self.modelo = modelo
-        self.precio = precio
-        self.asientos = asientos
-        self.marca = marca
-        self.motor = motor
-        self.registro = registro
-    
-    def cantidadCreados(self):
-        cantidadCreados = 0
-        
-    def cantidadAsientos(self):
-        return len(self.asientos)
-    def verificarIntegridad(self):
-        if self.registro != self.motor.registro:
-            return "Las piezas no son originales"
-        for i in range(len(self.asientos)):
-            if (self.asientos[i].registro != self.registro):
-                return "Las piezas no son originales"
-        return "Auto original"
 
 class Motor:
     def __init__(self, numeroCilindros, tipo, registro):
@@ -45,3 +26,26 @@ class Motor:
         for i in tipos:
             if tipo == i:
                 self.tipo = tipo
+
+class Auto:
+    cantidadCreados = 0
+    def __init__(self, modelo, precio, asientos, marca, motor, registro):
+        self.modelo = modelo
+        self.precio = precio
+        self.asientos = asientos
+        self.marca = marca
+        self.motor = motor
+        self.registro = registro
+
+    def cantidadAsientos(self):
+        return (asientos)
+    def verificarIntegridad(self):
+        if self.registro != self.motor.registro:
+            return "Las piezas no son originales"
+        for i in range(len(self.asientos)):
+            if (self.asientos[i].registro != self.registro):
+                return "Las piezas no son originales"
+        return "Auto original"
+
+
+            
